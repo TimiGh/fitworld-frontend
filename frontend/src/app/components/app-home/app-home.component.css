@@ -1,0 +1,40 @@
+.title {
+  font-family: 'Satisfy', cursive !important;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.carousel-inner, .carousel-item > img{
+  max-height: 686px;
+}
+
+.main-image {
+  background-color: black;
+  opacity: 0.92;
+}
+
+.main-image img {
+  margin-left: auto;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.wallpaper-title {
+  position: absolute;
+  font-size: 60px;
+  font-weight: bolder;
+  color: white;
+  top:240px;
+  left: 120px;
+}
+
+.wallpaper-subtitle {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  top:340px;
+  left: 190px;
+}

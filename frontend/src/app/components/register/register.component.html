@@ -1,0 +1,64 @@
+<div class="container register-box">
+  <div class="row main">
+    <div class="main-login main-center">
+      <h1 class="title">Register</h1>
+      <form class="form-horizontal"  [formGroup]="registerForm">
+
+        <div class="form-group">
+          <label for="email" class="cols-sm-2 control-label">Adresa de email</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope fa" aria-hidden="true"></i>
+                            </span>
+              <input type="text" class="form-control" id="email" placeholder="Introduceti adresa de email"
+                     name="email" formControlName="email"
+                     required/>
+            </div>
+            <p *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched" class="invalid">
+              Adresa de email este invalida</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="cols-sm-2 control-label">Parola</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+                            </span>
+              <input type="password" class="form-control" placeholder="Introduceti parola" id="password"
+                     name="password" formControlName="password"
+                     required/>
+            </div>
+            <p *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched" class="invalid">
+              Parola trebuie sa contina o litera mare o litera mica si o cifra</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm" class="cols-sm-2 control-label">Confirma parola</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+                            </span>
+              <input type="password" class="form-control" id="confirm" placeholder="Confirma parola" [minLength]="4"
+                     name="confirm" formControlName="confirm_password"
+                     required/>
+            </div>
+            <p *ngIf="registerForm.get('confirm_password').invalid && registerForm.get('confirm_password').touched" class="invalid">
+              Parolele nu coincid</p>
+          </div>
+        </div>
+
+        <div class="form-group ">
+          <button type="button" class="btn btn-primary btn-lg btn-block login-button" (click)="register(registerForm.value)">Inregsitrare</button>
+        </div>
+        <div class="login-register">
+          <a routerLink="/login">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

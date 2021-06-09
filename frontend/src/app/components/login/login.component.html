@@ -1,0 +1,42 @@
+<div class="container login-box">
+  <div class="row main">
+    <div class="main-login main-center">
+      <h1 class="title">Login</h1>
+      <form class="form-horizontal" [formGroup]="registerForm">
+        <div class="form-group">
+          <label for="email" class="cols-sm-2 control-label">Your Email</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope fa" aria-hidden="true"></i>
+                            </span>
+              <input formControlName="email" type="text" class="form-control" required [minLength]="4" name="email" id="email" placeholder="Enter your Email" />
+            </div>
+          </div>
+          <p *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched" class="invalid">Adresa de email este invalida</p>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="cols-sm-2 control-label">Password</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+                            </span>
+              <input formControlName="password" type="password" class="form-control" name="password" id="password" required [minLength]="6" placeholder="Enter your Password" />
+            </div>
+          </div>
+          <p *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched" class="invalid">
+            Parola este invalida</p>
+        </div>
+
+        <div class="form-group ">
+          <button type="button" class="btn btn-primary btn-lg btn-block login-button" (click)="login()">Log In</button>
+        </div>
+        <div class="login-register">
+          <a routerLink="/register">Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

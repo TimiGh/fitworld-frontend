@@ -1,0 +1,16 @@
+.carousel-inner, .carousel-item, .view , .view img, .slide {
+    min-height: 430px;
+    max-height: 430px;
+    min-width: 650px;
+    max-width: 650px;
+}
+
+.view img{
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.carousel-caption {
+    bottom: 15%;
+}

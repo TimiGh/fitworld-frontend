@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+
+.invalid {
+    color: red;
+    font-size: 13px;
+}
+
+.container {
+    min-height: 100%;
+}
+
+/*.container.login-box , .container.register-box {*/
+/*    margin: calc((100vh - 718px) / 2) auto !important;*/
+/*}*/
+
+/*.container.contact-box {*/
+/*    margin: calc((100vh - 846px) / 2) auto !important;*/
+/*}*/
+
+i {
+    margin-right: 10px;
+}
